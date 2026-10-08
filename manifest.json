@@ -5,7 +5,7 @@
   "description": "Search, sort and group your open tabs by category. Free, open source, and fully offline.",
   "permissions": ["tabs", "tabGroups", "sessions"],
   "action": {
-    "default_popup": "popup.html",
+    "default_popup": "src/popup/popup.html",
     "default_title": "Tab Manager",
     "default_icon": {
       "16": "icons/icon16.png",

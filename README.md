@@ -37,13 +37,25 @@ Nothing is stored and nothing leaves your browser.
 
 ## Adding your own sites
 
-Categories are plain lists of domains in [categorize.js](categorize.js). Add a domain to the list under the category you want and reload the extension. Subdomains are matched automatically, so `github.com` also covers `gist.github.com`.
+Categories are plain lists of domains in [src/categories/sites.js](src/categories/sites.js). Add a domain to the list under the category you want and reload the extension. Subdomains are matched automatically, so `github.com` also covers `gist.github.com`.
 
 ## Project layout
 
-- `manifest.json` – extension manifest (Manifest V3)
-- `popup.html`, `popup.css`, `popup.js` – the popup UI and tab actions
-- `categorize.js` – the categorisation rules
+```
+manifest.json            extension manifest (Manifest V3)
+icons/                   toolbar and store icons
+src/
+  categories/
+    sites.js             the categories and the sites in each (edit this one)
+    categorize.js        works out a tab's category from its URL
+  popup/
+    popup.html, popup.css
+    main.js              loads the tabs, keeps the list fresh, wires up the controls
+    view.js              draws the grouped list
+    actions.js           switch, close duplicates, group, ungroup
+    state.js             what the popup is showing, and the search match
+    dom.js               the popup's elements and small helpers
+```
 
 There is no build step and there are no dependencies.
 
