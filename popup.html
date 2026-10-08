@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Tab Manager</title>
+    <link rel="stylesheet" href="popup.css" />
+  </head>
+  <body>
+    <header>
+      <div class="top">
+        <h1>Tab Manager</h1>
+        <span id="count" class="muted"></span>
+      </div>
+      <input id="search" type="search" placeholder="Search tabs by title or URL" autofocus autocomplete="off" />
+      <div class="actions">
+        <button id="group" type="button" title="Create Chrome tab groups from these categories">Group tabs</button>
+        <button id="ungroup" type="button">Ungroup</button>
+        <button id="dedupe" type="button">Close duplicates</button>
+      </div>
+      <p id="status" class="status" hidden></p>
+    </header>
+
+    <main id="list"></main>
+
+    <script type="module" src="popup.js"></script>
+  </body>
+</html>

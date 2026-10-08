@@ -1,0 +1,32 @@
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Screen recordings and other local media (may show personal tabs/accounts)
+*.mp4
+*.mov
+*.webm
+*.mkv
+# ...except the demo linked from the README
+!tab-manager.mp4
+
+# Packaged extension builds and signing keys
+*.zip
+*.crx
+*.pem
+
+# Secrets and local config
+.env
+.env.*
+
+# Logs and dependencies (none today, in case tooling is added later)
+*.log
+node_modules/
